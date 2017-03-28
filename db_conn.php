@@ -1,12 +1,14 @@
 <?php
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'auth';
+  $serwer = 'localhost';
+  $db_name = 'auth';
+  $user = 'root';
+  $pass = '';
 
   try {
-    $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+    $conn = new PDO("mysql:host=$serwer;dbname=$db_name;", $user, $pass);
   } catch (Exception $e) {
-    die("Connection failed: ". $e->getMessage());
+    die("Connection failed: " .$e->getMessage());
   }
+
+
  ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 22 Mar 2017, 21:18
+-- Czas generowania: 28 Mar 2017, 20:27
 -- Wersja serwera: 10.1.21-MariaDB
 -- Wersja PHP: 5.6.30
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `auth`
 --
-CREATE DATABASE IF NOT EXISTS `auth` DEFAULT CHARACTER SET utf8 COLLATE utf8_polish_ci;
-USE `auth`;
 
 -- --------------------------------------------------------
 
@@ -30,8 +28,9 @@ USE `auth`;
 
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
-  `email` varchar(250) COLLATE utf8_polish_ci DEFAULT NULL,
-  `password` varchar(200) COLLATE utf8_polish_ci DEFAULT NULL
+  `login` varchar(250) COLLATE utf8_polish_ci DEFAULT NULL,
+  `password` varchar(200) COLLATE utf8_polish_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
